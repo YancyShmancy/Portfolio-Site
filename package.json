@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YancyShmancy/portfolio-site.git"
+  },
+  "author": "yancyshmancy@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YancyShmancy/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/YancyShmancy/portfolio-site#readme"
+}
