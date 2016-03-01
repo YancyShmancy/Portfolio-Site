@@ -37,3 +37,7 @@ $(document).keydown(function(e) {
 $('.picture').on('click', function() {
     console.log("picture clicked!");
 });
+
+$('.door').on('click', function() {
+    $(this).addClass('clicked');
+})
