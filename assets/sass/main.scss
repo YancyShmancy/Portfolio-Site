@@ -1,1 +1,134 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+//@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.camera {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hand {
+    width: 300px;
+    height: 300px;
+    background: url('../img/hand.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    z-index: 1000000;
+    bottom: 0;
+    -webkit-animation: hand 5s infinite;
+}
+
+@-webkit-keyframes hand {
+    0% {transform: translateY(0) translateX(-10px);}
+    50% {transform: translateY(30px) translateX(0);}
+    100% {transform: translateY(0) translateX(-10px);}
+}
+
+.container {
+    position: relative; 
+    float: left;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    perspective: 700px;
+    background:#222;
+}
+
+.assembly {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    -webkit-transform-origin-z: 500px;
+    
+    .rotational-assembly {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-style: preserve-3d;
+        
+        &>div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+}
+
+.wall-1 {
+    height: 700px;
+    width: 4000px;
+    border: 5px solid black;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    position: absolute;
+    margin-left: -2000px;
+    margin-top: -350px;
+    transform: rotate3d(0, -1, 0, 90deg) translate3d(-1000px, 0, 500px);
+    
+    .picture {
+        height: 200px;
+        width: 100px;
+        background: url(../img/me.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+    }
+}
+
+.wall-2 {
+    height: 700px;
+    width: 4000px;
+    border: 5px solid black;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    position: absolute;
+    margin-left: -2000px;
+    margin-top: -350px;
+    transform: rotate3d(0, 1, 0, 90deg) translate3d(1000px, 0, 500px);
+}
+
+.wall-3 {
+    width: 8000px;
+    height: 700px;
+    border: 5px solid black;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    position: absolute;
+    margin-left: -4000px;
+    margin-top: -350px;
+    transform: translate3d(0,0, -3000px) rotate3d(0, 1, 0, 180deg);
+    backface-visibility: visible;    
+}
+
+.floor {
+    width: 1000px;
+    height: 4000px;
+    background: url('../img/wall-texture.png')repeat 0 0;
+    transform: rotate3d(1, 0, 0, -90deg) translate3d(0 , 1000px, 350px);
+    margin-top: -2000px;
+    margin-left: -500px;
+}
+
+.ceiling {
+    width: 1000px;
+    height: 4000px;
+    margin-left: -500px;
+    margin-top: -2000px;
+    top: 50%;
+    left: 50%;
+    transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -1000px , 350px);
+    background: url('../img/wall-texture.png') repeat 0 0;
+}
+
+body,html{height:100%;margin:0;overflow:hidden}
+
+
+

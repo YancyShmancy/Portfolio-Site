@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "My portfolio site",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "keyboardjs": "^2.2.0",
+    "three": "^0.74.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
