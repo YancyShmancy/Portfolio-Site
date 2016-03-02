@@ -32,7 +32,7 @@ body {
     100% {transform: translateY(0) translateX(-10px);}
 }
 
-.container {
+.world {
     position: relative; 
     float: left;
     height: 100%;
@@ -47,6 +47,7 @@ body {
     top: 50%;
     left: 50%;
     transform-style: preserve-3d;
+    transform-origin-z: 500px;
     -webkit-transform-origin-z: 500px;
     
     .rotational-assembly {
@@ -102,8 +103,7 @@ body {
     border: 5px solid black;
     margin-left: -500px;
     margin-top: -350px;
-    transform: translate3d(0,0, -3000px) rotate3d(0, 1, 0, 180deg);
-    backface-visibility: visible; 
+    transform: translate3d(0,0, -3000px) rotate3d(0, 1, 0, 180deg); 
     
     &.clicked {
         transform: translate3d(0, -700px, -3000px) rotate3d(0, 1, 0, 180deg);
