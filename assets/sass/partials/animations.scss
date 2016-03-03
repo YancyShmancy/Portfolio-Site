@@ -1,0 +1,17 @@
+@keyframes hand {
+    0% {transform: translateY(0) translateX(-10px);}
+    50% {transform: translateY(30px) translateX(0);}
+    100% {transform: translateY(0) translateX(-10px);}
+}
+
+@-webkit-keyframes hand {
+    0% {-webkit-transform: translateY(0) translateX(-10px);}
+    50% {-webkit-transform: translateY(30px) translateX(0);}
+    100% {-webkit-transform: translateY(0) translateX(-10px);}
+}
+
+@-moz-keyframes hand {
+    0% {-moz-transform: translateY(0) translateX(-10px);}
+    50% {-moz-transform: translateY(30px) translateX(0);}
+    100% {-moz-transform: translateY(0) translateX(-10px);}
+}

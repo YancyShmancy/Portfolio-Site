@@ -3,6 +3,13 @@ var $rotAssembly = document.querySelector('.rotational-assembly');
 var $assembly = document.querySelector('.assembly');
 var posZ;
 var rotationNumber = 0;
+var rotationNumberReset = function() {
+    if (rotationNumber <= -360) {
+        rotationNumber = 0;
+    } else if (rotationNumber >= 360) {
+        rotationNumber = 0;
+    }
+}
 
 /* Getting Z Coordinate */
 
@@ -72,6 +79,7 @@ var leftArrowClicked = function() {
     
     rotateLeft();
     rotationNumber -= 30;
+    rotationNumberReset();
     console.log(rotationNumber);
 };
 
@@ -79,7 +87,13 @@ var rightArrowClicked = function() {
     
     rotateRight();
     rotationNumber += 30;
+    rotationNumberReset();
     console.log(rotationNumber);
+}
+
+var backArrowClicked = function() {
+    
+    moveBack();
 }
 
 $(document).keydown(function(e) {
@@ -88,14 +102,18 @@ $(document).keydown(function(e) {
             leftArrowClicked();
         break;
         case 38: // up
-            upArrowClicked();
+            if ( (rotationNumber > -90 && rotationNumber < 90) || rotationNumber < -270 || rotationNumber > 270 ) {
+                upArrowClicked();
+            } else if ( (rotationNumber < -90 && rotationNumber > -270) || (rotationNumber > 90 && rotationNumber < 270) ) {
+                backArrowClicked();
+            }
         break;
         case 39: // right
             rightArrowClicked();
         break;
 
         case 40:// down
-            moveBack();
+            backArrowClicked();
         break;
             
         default: return; // exit this handler for other keys
@@ -116,4 +134,5 @@ $('.picture').on('click', function() {
 
 $('.door').on('click', function() {
     $(this).addClass('clicked');
+    $('.big-floor').addClass('clicked');
 });

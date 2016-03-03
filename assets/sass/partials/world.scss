@@ -1,0 +1,195 @@
+.world {
+    position: relative; 
+    float: left;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    perspective: 700px;
+    -webkit-perspective: 700px;
+    -moz-perspective: 700px;
+    background:#222;
+}
+
+.assembly {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-origin-z: 500px;
+    -webkit-transform-origin-z: 500px;
+    -moz-transform-origin-z: 500px;
+    
+    .rotational-assembly {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        
+        &>div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+}
+
+.wall-1 {
+    height: 700px;
+    width: 4000px;
+    border: 5px solid black;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    margin-left: -2000px;
+    margin-top: -350px;
+    transform: rotate3d(0, -1, 0, 90deg) translate3d(-1000px, 0, 500px);
+    -webkit-transform: rotate3d(0, -1, 0, 90deg) translate3d(-1000px, 0, 500px);
+    -moz-transform: rotate3d(0, -1, 0, 90deg) translate3d(-1000px, 0, 500px);
+    
+    .picture {
+        height: 200px;
+        width: 100px;
+        background: url(../img/me.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+    }
+}
+
+.wall-2 {
+    height: 700px;
+    width: 4000px;
+    border: 5px solid black;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    margin-left: -2000px;
+    margin-top: -350px;
+    transform: rotate3d(0, 1, 0, 90deg) translate3d(1000px, 0, 500px);
+    -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(1000px, 0, 500px);
+    -moz-transform: rotate3d(0, 1, 0, 90deg) translate3d(1000px, 0, 500px);
+}
+
+.door {
+    background: url('../img/wood-texture.jpg') repeat 0 0;
+    transition: 5s transform ease-in;
+    width: 1000px;
+    height: 700px;
+    border: 5px solid black;
+    margin-left: -500px;
+    margin-top: -350px;
+    transform: translate3d(0,0, -3000px) rotate3d(0, 1, 0, 180deg);
+    -webkit-transform: translate3d(0,0, -3000px) rotate3d(0, 1, 0, 180deg);
+    -moz-transform: translate3d(0,0, -3000px) rotate3d(0, 1, 0, 180deg);
+    
+    &.clicked {
+        transform: translate3d(0, -700px, -3000px) rotate3d(0, 1, 0, 180deg);
+        -webkit-transform: translate3d(0, -700px, -3000px) rotate3d(0, 1, 0, 180deg);
+        -moz-transform: translate3d(0, -700px, -3000px) rotate3d(0, 1, 0, 180deg);
+    }
+}
+
+
+.floor {
+    width: 1000px;
+    height: 4000px;
+    background: url('../img/wall-texture.png')repeat 0 0;
+    transform: rotate3d(1, 0, 0, -90deg) translate3d(0 , 1000px, 350px);
+    -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0 , 1000px, 350px);
+    -moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0 , 1000px, 350px);
+    margin-top: -2000px;
+    margin-left: -500px;
+}
+
+.ceiling {
+    width: 1000px;
+    height: 4000px;
+    margin-left: -500px;
+    margin-top: -2000px;
+    top: 50%;
+    left: 50%;
+    transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -1000px , 350px);
+    -webkit-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -1000px , 350px);
+    -moz-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -1000px , 350px);
+    background: url('../img/wall-texture.png') repeat 0 0;
+}
+
+.mini-left-wall {
+    width: 750px;
+    height: 1400px;
+    margin-left: -375px;
+    margin-top: -700px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: rotate3d(0, 1, 0, 180deg) translate3d(875px, -350px, 3000px);
+    -webkit-transform: rotate3d(0, 1, 0, 180deg) translate3d(875px, -350px, 3000px);
+    -moz-transform: rotate3d(0, 1, 0, 180deg) translate3d(875px, -350px, 3000px);
+}
+
+.mini-right-wall {
+    width: 750px;
+    height: 1400px;
+    margin-left: -375px;
+    margin-top: -700px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: rotate3d(0, 1, 0, 180deg) translate3d(-875px, -350px, 3000px);
+    -webkit-transform: rotate3d(0, 1, 0, 180deg) translate3d(-875px, -350px, 3000px);
+    -moz-transform: rotate3d(0, 1, 0, 180deg) translate3d(-875px, -350px, 3000px);
+}
+
+.big-floor {
+    height: 2700px;
+    width: 2500px;
+    margin-left: -1250px;
+    margin-top: -1350px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4000px, 350px);
+    -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4000px, 350px);
+    -moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4000px, 350px);
+    transition: 5s transform ease;
+}
+
+.big-ceiling {
+    height: 2500px;
+    width: 2500px;
+    margin-left: -1250px;
+    margin-top: -1250px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 1050px);
+    -webkit-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 1050px);
+    -moz-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -4000px, 1050px);
+}
+
+.big-left-side {
+    height: 1400px;
+    width: 2500px;
+    margin-left: -1250px;
+    margin-top: -700px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, 1250px);
+    -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, 1250px);
+    -moz-transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, 1250px);
+}
+
+.big-right-side {
+    height: 1400px;
+    width: 2500px;
+    margin-left: -1250px;
+    margin-top: -700px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, 1250px);
+    -webkit-transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, 1250px);
+    -moz-transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, 1250px);
+}
+
+.big-far-wall {
+    height: 1400px;
+    width: 2500px;
+    margin-left: -1250px;
+    margin-top: -700px;
+    background: url('../img/wall-texture.png') repeat 0 0;
+    transform: translate3d(0, -350px, -5250px);
+    -webkit-transform: translate3d(0, -350px, -5250px);
+    -moz-transform: translate3d(0, -350px, -5250px);
+}
