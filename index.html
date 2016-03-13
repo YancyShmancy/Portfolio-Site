@@ -7,26 +7,40 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
+   
+    <div class="intro">
+        <div class="intro--background"></div>
+        <div class="intro--container">
+            <h1>Welcome to the <span>Crazy House</span></h1>
+            <p>Welcome to Zoey Yancy's experimental 3D Portfolio rendered entirely with HTML and CSS.</p>
+
+            <div class="col-md-8 col-md-offset-2">
+                <p>Use arrow keys or WASD to move around in the 3D space.</p>
+            </div>
+        </div>
+    </div>
+    
     
     <div class="world">
         <div class="hand"></div>
         <div class="assembly">
             <div class="rotational-assembly">
                 <!--Entry hallway-->
-                <div class="wall-1">
+                <div class="dark-face wall-1 texture">
                     <div class="picture"></div>
                 </div>
-                <div class="wall-2"></div>
+                <div class="dark-face wall-2 texture"></div>
                 <div class="door"></div>
-                <div class="floor"></div>
-                <div class="ceiling"></div>
+                <div class="dark-face floor texture"></div>
+                <div class="dark-face ceiling texture"></div>
                 
                 <!-- Big Room -->
-                <div class="light-face big-floor"></div>
-                <div class="dark-face big-ceiling"></div>
-                <div class="dark-face mini-left-wall"></div>
-                <div class="dark-face mini-right-wall"></div>
-                <div class="light-face big-far-wall">
+
+                <div class="light-face big-floor texture"></div>
+                <div class="dark-face big-ceiling texture"></div>
+                <div class="dark-face mini-left-wall texture"></div>
+                <div class="dark-face mini-right-wall texture"></div>
+                <div class="light-face big-far-wall texture">
                     <div class="lights">
                         <div class="light"></div>
                         <div class="light"></div>
@@ -37,9 +51,9 @@
                     <div class="projects-container">
                         <div class="top-row">
                             <div class="project-square" id="safe-house">
-                                <div class="project-square--front">
+                                <button role="button" class="project-square--front" data-toggle="modal" data-target="#sh-modal">
 
-                                </div>
+                                </button>
                             </div>
                             <div class="project-square" id="yosemite">
                                 <div class="project-square--front">
@@ -66,16 +80,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="light-face big-left-side"></div>
-                <div class="light-face big-right-side"></div>
+                <div class="light-face big-left-side texture">
+                    
+                    <div class="aboutMe-container">
+                        <h1>About Me</h1>
+                        
+                        <div class="col-xs-6">
+                            <p>Hey, there. I'm Zoey, an interactive designer and developer. I love experimenting with coding, and I enjoy pushing my limits as a developer. Welcome to my first person 3D experience, created with HTML and CSS transforms. Check out my projects to your right, or send me a message with the form behind you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="light-face big-right-side texture"></div>
+
             </div>
         </div>
     </div>
     
+    <div class="modal fade in" id="sh-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+        </div>
+    </div>
     
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

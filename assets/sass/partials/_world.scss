@@ -139,15 +139,14 @@
 }
 
 .big-floor {
-    height: 2700px;
+    height: 2500px;
     width: 2500px;
     margin-left: -1250px;
-    margin-top: -1350px;
+    margin-top: -1250px;
     background: url('../img/wall-texture.png') repeat 0 0;
-    transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4000px, 350px);
-    -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4000px, 350px);
-    -moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4000px, 350px);
-    transition: 5s transform ease;
+    transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4250px, 350px);
+    -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4250px, 350px);
+    -moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 4250px, 350px);
 }
 
 .big-ceiling {
@@ -167,9 +166,9 @@
     margin-left: -1250px;
     margin-top: -700px;
     background: url('../img/wall-texture.png') repeat 0 0;
-    transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, 1250px);
-    -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, 1250px);
-    -moz-transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, 1250px);
+    transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, -1250px);
+    -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, -1250px);
+    -moz-transform: rotate3d(0, 1, 0, 90deg) translate3d(4000px, -350px, -1250px);
 }
 
 .big-right-side {
@@ -178,9 +177,9 @@
     margin-left: -1250px;
     margin-top: -700px;
     background: url('../img/wall-texture.png') repeat 0 0;
-    transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, 1250px);
-    -webkit-transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, 1250px);
-    -moz-transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, 1250px);
+    transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, -1250px);
+    -webkit-transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, -1250px);
+    -moz-transform: rotate3d(0, 1, 0, -90deg) translate3d(-4000px, -350px, -1250px);
 }
 
 .big-far-wall {
@@ -192,4 +191,7 @@
     transform: translate3d(0, -350px, -5250px);
     -webkit-transform: translate3d(0, -350px, -5250px);
     -moz-transform: translate3d(0, -350px, -5250px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
