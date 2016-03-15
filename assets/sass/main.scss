@@ -39,10 +39,72 @@ h2 {
     -webkit-text-stroke: 1px black;
 }
 
+.aboutMe-container {
+    width: 100%;
+    padding: 100px 200px;
+    
+    h1 {
+        width: 100%;
+        padding: 200px 0 60px 0;
+    }
+    
+    p {
+        font-size: 3em;
+        color: black;
+        font-family: 'All Over Again';
+        -webkit-text-stroke: 1px rgba(47,47,47,1);
+    }
+    
+    .col-xs-5 {
+        padding-left: 150px;
+    }
+    img {
+        width: 50%;
+        height: auto;
+        -webkit-box-shadow: -15px 19px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -15px 19px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: -15px 19px 5px 0px rgba(0,0,0,0.75);
+    }
+}
+
+h1.contact {
+    padding-top: 300px;
+}
+
+.contactMe {
+    width: 1500px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    margin-left: -750px;
+    font-family: 'All Over Again';
+    color: black;
+    font-size: 3em;
+    
+    input {
+        height: 100px;
+        
+        font-size: 1em;
+    }
+    
+    textarea {
+        height: 300px;
+        
+        font-size: 1em;
+    }
+    
+    .btn {
+        background-color: darkred !important;
+        width: 300px;
+        height: 150px;
+        font-size: 1em;
+    }
+}
 
 .world h1 {
-    
-    -webkit-text-stroke: 1px black;
+    font-family: 'Crazy Killer';
+    color: darkred;
+//    -webkit-text-stroke: 1px black;
 }
 .texture {
     background: url('../img/padded-wall-texture.jpg') repeat 0 0 !important;
@@ -105,7 +167,7 @@ h2 {
 }
 
 .light-face {
-    filter: brightness(1.4);
+    filter: brightness(1.1);
     -webkit-filter: brightness(1.1);
     -moz-filter: brightness(1.1);
 }
@@ -133,9 +195,6 @@ h2 {
         border-style: solid;
         border-color: brown;
         border-radius: 20px 20px 0 0;
-//        -webkit-box-shadow: 6px 180px 300px 42px rgba(245,245,174,1);
-//        -moz-box-shadow: 6px 180px 300px 42px rgba(245,241,174,1);
-//        box-shadow: 6px 200px 300px 42px rgba(245,241,174,1);
         
         &::after {
             position: absolute;
@@ -170,16 +229,16 @@ h2 {
 }
 
 .shadow {
-    text-shadow: 0px 1px $text-color, 
-                0px 2px $text-color, 
-                0px 3px $text-color, 
-                0px 4px $text-color, 
-                0px 5px $text-color, 
-                0px 6px $text-color,
-                0px 7px $text-color,
-                0px 8px $text-color,
-                0px 9px $text-color,
-                0px 10px $text-color
+//    text-shadow: 0px 1px $text-color, 
+//                0px 2px $text-color, 
+//                0px 3px $text-color, 
+//                0px 4px $text-color, 
+//                0px 5px $text-color, 
+//                0px 6px $text-color,
+//                0px 7px $text-color,
+//                0px 8px $text-color,
+//                0px 9px $text-color,
+//                0px 10px $text-color
 }
 
 .projects-container {
@@ -211,9 +270,6 @@ h2 {
     width: 400px;
     background: url('../img/picture-frame.jpg') no-repeat;
     background-size: 100%;
-//    border-width: 15px 20px 25px 20px;
-//    border-color: brown;
-//    border-style: solid;
     margin-right: 200px;
     float: left;
     -webkit-box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.7);
@@ -250,6 +306,27 @@ h2 {
             background-size: cover; 
         }
     }
+    
+    &#advanced-js {
+        .project-square--front {
+            background:
+                -webkit-linear-gradient(80deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1)),
+                url('../img/d3js.png') no-repeat;
+            background-position: center;
+            background-size: cover; 
+        }
+    }
+    
+    &#hot-sauce {
+        .project-square--front {
+            background:
+                -webkit-linear-gradient(100deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1)),
+                url('../img/label-fronts.jpg') no-repeat;
+            background-position: center;
+            background-size: cover; 
+        }
+    }
+    
     .project-square--front {
         height: 300px;
         width: 300px;
