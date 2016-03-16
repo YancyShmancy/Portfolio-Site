@@ -7,12 +7,15 @@
     <!-- inject:css -->
     <!-- endinject -->
 </head>
-<body>
+<body class="js">
+  
+    <div id="preloader"></div>
+
    
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="intro--background"></div>
         <div class="intro--container">
-            <h1>Welcome to the <span>Crazy House</span></h1>
+            <h1 class="title">Welcome to the <span>Crazy House</span></h1>
             <p>Welcome to Zoey Yancy's experimental 3D Portfolio rendered entirely with HTML and CSS.</p>
 
             <div class="col-md-8 col-md-offset-2">
@@ -27,8 +30,11 @@
         <div class="assembly">
             <div class="rotational-assembly">
                 <!--Entry hallway-->
+                <div class="dark-face small-back-wall texture">
+                    <h1>YOU CANT LEAVE!</h1>
+                    <h1>HAHAHAHA</h1>
+                </div>
                 <div class="dark-face wall-1 texture">
-                    <div class="picture"></div>
                 </div>
                 <div class="dark-face wall-2 texture"></div>
                 <div class="door"></div>
@@ -36,86 +42,10 @@
                 <div class="dark-face ceiling texture"></div>
                 
                 <!-- Big Room -->
-
-                <div class="light-face big-floor texture"></div>
-                <div class="dark-face big-ceiling texture"></div>
-                <div class="dark-face mini-left-wall texture"></div>
-                <div class="dark-face mini-right-wall texture"></div>
-                <div class="light-face big-far-wall texture">
-                    <div class="lights">
-                        <div class="light"></div>
-                        <div class="light"></div>
-                        <div class="light"></div>
-                    </div>
-                    <h1 class="shadow">My Portfolio</h1>
-                    <h2 class="shadow">Developer / Designer</h2>
-                    <div class="projects-container">
-                        <div class="top-row">
-                            <div class="project-square" id="safe-house">
-                                <button role="button" class="project-square--front" data-toggle="modal" data-target="#sh-modal">
-
-                                </button>
-                            </div>
-                            <div class="project-square" id="yosemite">
-                                <button role="button" data-toggle="modal" data-target="#yosemite-modal" class="project-square--front">
-
-                                </button>
-                            </div>
-                            <div class="project-square" id="advanced-js">
-                                <button role="button" data-toggle="modal" data-target="#adv-js-modal" class="project-square--front">
-
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="bottom-row">
-                            <div class="project-square" id="game-dev">
-                                <button role="button" data-toggle="modal" data-target="#game-dev-modal" class="project-square--front">
-                                </button>
-                            </div>
-                            <div class="project-square" id="hot-sauce">
-                                <button role="button" data-target="#hot-sauce-modal" data-toggle="modal" class="project-square--front">
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="light-face big-left-side texture">
-                    
-                    <div class="aboutMe-container">
-                        <h1>About Me</h1>
-                        
-                        <div class="col-xs-6 col-xs-offset-1">
-                            <p>Hey, there. I'm Zoey, an interactive designer and developer. I love experimenting with coding, and I enjoy pushing my limits as a developer. Welcome to my first person 3D experience, created with HTML and CSS transforms. Check out my projects to your right, or send me a message with the form behind you.</p>
-                        </div>
-                        <div class="col-xs-5">
-                            <img src="./assets/img/IMG_0740.JPG" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="light-face big-right-side texture">
-                    <h1 class="contact">Contact Me</h1>
-                    <form class="contactMe">
-                        
-                        <fieldset class="form-group">
-                            <label for="exampleInputEmail1">Email Address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required="true">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Enter Your Name">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="exampleTextarea">Your Message</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="3" required="true"></textarea>
-                        </fieldset>
-                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
+
     
     <!-- Safe House Modal -->
     
@@ -134,7 +64,7 @@
                 <iframe src="//circuslabs.net/~zoey.yancy/safe-house/" width="100%" height="500">
                 </iframe>
                 
-                <a href="//circuslabs.net/~zoey.yancy/safe-house/" class="btn btn-primary">See Full Site</a>
+                <a href="//circuslabs.net/~zoey.yancy/safe-house/" class="btn btn-primary" target="_blank">See Full Site</a>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -160,7 +90,7 @@
                 <iframe src="//circuslabs.net/~zoey.yancy/yosemite-national-park/" width="100%" height="500">
                 </iframe>
                 
-                <a href="//circuslabs.net/~zoey.yancy/yosemite-national-park/" class="btn btn-primary">See Full Site</a>
+                <a href="//circuslabs.net/~zoey.yancy/yosemite-national-park/" class="btn btn-primary" target="_blank">See Full Site</a>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -181,12 +111,13 @@
                 <h4 class="modal-title" id="myModalLabel">Data Driven Documents Plugin</h4>
               </div>
               <div class="modal-body">
-                <p>Using the es6 module pattern and class inheritance, I created a plugin for Data Driven Documents (d3.js) to quickly and efficiently create responsive animated bar graphs. Check out the example below.</p>
+                <p>Using the es6 module pattern and class inheritance, I created a plugin for Data Driven Documents (d3.js) to quickly and efficiently create animated bar graphs. Check out the example below.</p>
                 
                 <iframe src="//circuslabs.net/~zoey.yancy/es6-final/" width="100%" height="500">
                 </iframe>
                 
-                <a href="//circuslabs.net/~zoey.yancy/es6-final/" class="btn btn-primary">See Full Site</a>
+                <a href="//circuslabs.net/~zoey.yancy/es6-final/" class="btn btn-primary" target="_blank">See Site Example</a>
+                <a href="http://codepen.io/yancyshmancy/pen/NNbVGZ" class="btn btn-primary" target="_blank">See Codepen</a>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -207,7 +138,9 @@
                 <h4 class="modal-title" id="myModalLabel">Red Bull Space Jumper</h4>
               </div>
               <div class="modal-body">
-                <p>Using the Unity Game Engine, the team created a branded gaming experience for Red Bull Energy Drinks. Check out the game below.</p>
+                <p>Using the Unity Game Engine, the team created a branded gaming experience for Red Bull Energy Drinks. Click the link below to play the game.</p>
+                
+                <a href="//circuslabs.net/~zoey.yancy/redbull-game" class="btn btn-primary btn-lg" target="_blank">Play the Game</a>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -233,7 +166,7 @@
                 <iframe src="//circuslabs.net/~zoey.yancy/louisiana-hot-sauce/" width="100%" height="500">
                 </iframe>
                 
-                <a href="//circuslabs.net/~zoey.yancy/louisiana-hot-sauce/" class="btn btn-primary">See Full Site</a>
+                <a href="//circuslabs.net/~zoey.yancy/louisiana-hot-sauce/" class="btn btn-primary" target="_blank">See Full Site</a>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

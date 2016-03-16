@@ -3,7 +3,7 @@
 @import "partials/world";
 @import "partials/animations";
 @import "partials/fonts";
-
+@import "partials/loader";
 
 * {
     box-sizing: border-box;
@@ -16,6 +16,15 @@ html {
     overflow:hidden
 }
 
+.door:hover,
+.project-square--front:hover {
+    
+    -webkit-filter: brightness(1.5);
+} 
+
+.btn-primary {
+    background-color: darkred !important;
+}
 h1 {
     width: 100%;
     text-align: center;
@@ -33,10 +42,10 @@ h1 {
 h2 {
     width: 100%;
     text-align: center;
-    color: $h1-color;
+    color: black;
     font-size: 3em;
     z-index: 10;
-    -webkit-text-stroke: 1px black;
+    font-family: 'All Over Again';
 }
 
 .aboutMe-container {
