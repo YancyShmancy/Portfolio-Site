@@ -4594,7 +4594,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 .small-back-wall {
   height: 700px;
   width: 1000px;
-  border: 5px solid black;
   margin-left: -500px;
   margin-top: -350px;
   transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, -1000px); }
@@ -4602,7 +4601,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 .wall-1 {
   height: 700px;
   width: 4000px;
-  border: 5px solid black;
   margin-left: -2000px;
   margin-top: -350px;
   transform: rotate3d(0, -1, 0, 90deg) translate3d(-1000px, 0, 500px);
@@ -4621,7 +4619,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 .wall-2 {
   height: 700px;
   width: 4000px;
-  border: 5px solid black;
   margin-left: -2000px;
   margin-top: -350px;
   transform: rotate3d(0, 1, 0, 90deg) translate3d(1000px, 0, 500px);
@@ -4633,7 +4630,6 @@ a.bg-danger:focus, a.bg-danger:hover {
   transition: 5s transform ease-in;
   width: 1000px;
   height: 700px;
-  border: 5px solid black;
   margin-left: -500px;
   margin-top: -350px;
   transform: translate3d(0, 0, -3000px) rotate3d(0, 1, 0, 180deg);
@@ -4840,8 +4836,10 @@ h1.contact {
   color: black;
   font-size: 3em; }
   .contactMe input {
-    height: 100px;
+    height: 80px;
     font-size: 1em; }
+  .contactMe input, .contactMe textarea {
+    background-color: rgba(255, 255, 255, 0.2); }
   .contactMe textarea {
     height: 300px;
     font-size: 1em; }
@@ -4894,12 +4892,6 @@ h1.contact {
     .intro .intro--container p {
       width: 100%;
       text-align: center; }
-
-.light-face,
-.dark-face {
-  -webkit-box-shadow: inset -1px 12px 19px 9px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: inset -1px 12px 19px 9px rgba(0, 0, 0, 0.8);
-  box-shadow: inset -1px 12px 19px 9px rgba(0, 0, 0, 0.8); }
 
 .light-face {
   filter: brightness(1.1);
@@ -4978,10 +4970,7 @@ h1.contact {
   background: url("../img/picture-frame.jpg") no-repeat;
   background-size: 100%;
   margin-right: 200px;
-  float: left;
-  -webkit-box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.7); }
+  float: left; }
   .project-square#safe-house .project-square--front {
     background: -webkit-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url("../img/safe-house-1.jpg") no-repeat;
     background-position: center;
@@ -5007,10 +4996,7 @@ h1.contact {
     width: 300px;
     margin: 50px 50px;
     overflow: hidden;
-    text-align: center;
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5); }
+    text-align: center; }
     .project-square .project-square--front:hover > h2 {
       transform: translateX(0) translateY(-50%); }
     .project-square .project-square--front h2 {
@@ -5025,3 +5011,8 @@ h1.contact {
       background: rgba(255, 255, 255, 0.9); }
   .project-square:nth-of-type(3) {
     margin-right: 0; }
+
+.message {
+  font-size: 3em;
+  font-family: 'Crazy Killer';
+  color: darkred; }
