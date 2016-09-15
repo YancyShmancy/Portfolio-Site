@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 //    });
 });
 
-var api_url = "http://127.0.0.1:7646";
+var api_url = "https://lit-headland-35601.herokuapp.com";
 var url;
 
 
